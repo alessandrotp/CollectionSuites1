@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Middleman" %></title>
+    <link rel="icon" type="image/x-icon" href="images/ico48x48.ico.png" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Playfair+Display:400,700" rel="stylesheet">
+
+    <!-- jquery -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+
+    <script src="/javascripts/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ -->
+
+    <!-- Foundation -->    
+   <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/foundation.css">
+    
+    <!-- Hide the ghosts divs when not in mobile view or hide some divs used in desktop but not in mobile-->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Get viewport width
+        var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)        
+        if ( w > 500) {
+          // Hide unnused mobile divs
+          my_element_jq = $('#ghost1');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost2');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost3');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost4');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost5');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost6');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost7');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost8');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+        } else{
+          // Hide unnused desktop divs
+          my_element_jq = $('#desktop1');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#desktop2');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#desktop3');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          // my_element_jq = $('#top-menu-id-1');
+          // comment = document.createComment(my_element_jq.get(0).outerHTML);
+          // my_element_jq.replaceWith(comment);
+
+          // my_element_jq = $('#top-menu-id-2');
+          // comment = document.createComment(my_element_jq.get(0).outerHTML);
+          // my_element_jq.replaceWith(comment);
+          // my_element_jq = $('#menu');
+          // comment = document.createComment(my_element_jq.get(0).outerHTML);
+          // my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#menu-2');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+        }
+      });
+    </script> 
+    
+    <!-- hubSlider -->
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> -->
+    <!-- <script src="/javascripts/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8" async defer></script> -->
+
+    <script type="text/javascript" src="/javascripts/hubslider.js"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.hub-slider-slides ul').hubSlider({
+          selector: $('li'),
+          button: {
+              next: $('.hub-slider-arrow_next'),
+              prev: $('.hub-slider-arrow_prev')
+          }
+          // transition: '0.7s',
+          // startOffset: 30,
+          // auto: true,
+          // time: 2 // secondly
+        });
+      })
+    </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script> --> 
+    <script src="/javascripts/vendor/foundation.min.js" type="text/javascript" charset="utf-8" async defer></script> 
+
+    <!-- foundation -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(function() {
+          $(document).foundation();
+        });
+      });
+    </script>
+    
+      
+    
+    <!-- fullpage -->
+    <script type="text/javascript" src="javascripts/jquery.fullPage.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // console.log ("entering scroll..");
+        // $(window).scroll(function(event) {
+        //   var scroll = $(document).scrollTop();
+        //   console.log("scroll actual: " + scroll);
+        // });
+         var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+         // console.log("pasa")
+        $('#fullpage').fullpage({
+        // loopBottom: true,
+          // menu: '#menu-2',
+
+          anchors:['Home', 'ConceptOutline', 'Specs', 'None', 'Features', 'None', 'Location', 'Gallery','Progress', 'Contact'],
+          fixedElements: '#top-menu-id-2',
+          
+          afterRender: function(){
+           $('#top-menu-id-2').hide();
+          },
+          // normalScrollElements: '#ghost1, #ghost2, #ghost3',
+          autoScrolling:false,
+          afterLoad: function(anchor, index){
+            if(index == 1){
+                 $('#top-menu-id-2').hide();
+            }  
+          },
+          // onLeave: function(index, nextIndex, direction) {
+          //   var foo = $('.link-1').offset().top;
+          //   console.log("bar: " + foo);
+          // }
+          onLeave: function(index, nextIndex, direction){
+            if (index==1 && direction=='down'){
+              $('#top-menu-id-2').fadeIn(700);  
+              console.log('baja')
+            }
+            if (index==2 && direction=='up'){
+              $('#top-menu-id-2').hide(0);  
+              console.log('sube')
+            }
+          },
+        });
+      });
+    </script>
+
+    <%= stylesheet_link_tag :site %>
+    <%= javascript_include_tag :all %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <%= yield %>
+  </body>
+ 
+  
+
+</html>

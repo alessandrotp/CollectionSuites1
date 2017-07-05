@@ -1,0 +1,671 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Collection Suites</title>
+    <link rel="icon" type="image/x-icon" href="images/ico48x48.ico.png" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Playfair+Display:400,700" rel="stylesheet">
+
+    <!-- jquery -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
+
+    <script src="/javascripts/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ -->
+
+    <!-- Foundation -->    
+   <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/foundation.css">
+    
+    <!-- Hide the ghosts divs when not in mobile view or hide some divs used in desktop but not in mobile-->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Get viewport width
+        var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)        
+        if ( w > 500) {
+          // Hide unnused mobile divs
+          my_element_jq = $('#ghost1');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost2');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost3');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost4');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost5');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost6');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost7');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#ghost8');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+        } else{
+          // Hide unnused desktop divs
+          my_element_jq = $('#desktop1');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#desktop2');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#desktop3');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+
+          // my_element_jq = $('#top-menu-id-1');
+          // comment = document.createComment(my_element_jq.get(0).outerHTML);
+          // my_element_jq.replaceWith(comment);
+
+          // my_element_jq = $('#top-menu-id-2');
+          // comment = document.createComment(my_element_jq.get(0).outerHTML);
+          // my_element_jq.replaceWith(comment);
+          // my_element_jq = $('#menu');
+          // comment = document.createComment(my_element_jq.get(0).outerHTML);
+          // my_element_jq.replaceWith(comment);
+
+          my_element_jq = $('#menu-2');
+          comment = document.createComment(my_element_jq.get(0).outerHTML);
+          my_element_jq.replaceWith(comment);
+        }
+      });
+    </script> 
+    
+    <!-- hubSlider -->
+    <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> -->
+    <!-- <script src="/javascripts/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8" async defer></script> -->
+
+    <script type="text/javascript" src="/javascripts/hubslider.js"></script>
+    
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.hub-slider-slides ul').hubSlider({
+          selector: $('li'),
+          button: {
+              next: $('.hub-slider-arrow_next'),
+              prev: $('.hub-slider-arrow_prev')
+          }
+          // transition: '0.7s',
+          // startOffset: 30,
+          // auto: true,
+          // time: 2 // secondly
+        });
+      })
+    </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script> --> 
+    <script src="/javascripts/vendor/foundation.min.js" type="text/javascript" charset="utf-8" async defer></script> 
+
+    <!-- foundation -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(function() {
+          $(document).foundation();
+        });
+      });
+    </script>
+    
+      
+    
+    <!-- fullpage -->
+    <script type="text/javascript" src="javascripts/jquery.fullPage.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // console.log ("entering scroll..");
+        // $(window).scroll(function(event) {
+        //   var scroll = $(document).scrollTop();
+        //   console.log("scroll actual: " + scroll);
+        // });
+         var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+         // console.log("pasa")
+        $('#fullpage').fullpage({
+        // loopBottom: true,
+          // menu: '#menu-2',
+
+          anchors:['Home', 'ConceptOutline', 'Specs', 'None', 'Features', 'None', 'Location', 'Gallery','Progress', 'Contact'],
+          fixedElements: '#top-menu-id-2',
+          
+          afterRender: function(){
+           $('#top-menu-id-2').hide();
+          },
+          // normalScrollElements: '#ghost1, #ghost2, #ghost3',
+          autoScrolling:false,
+          afterLoad: function(anchor, index){
+            if(index == 1){
+                 $('#top-menu-id-2').hide();
+            }  
+          },
+          // onLeave: function(index, nextIndex, direction) {
+          //   var foo = $('.link-1').offset().top;
+          //   console.log("bar: " + foo);
+          // }
+          onLeave: function(index, nextIndex, direction){
+            if (index==1 && direction=='down'){
+              $('#top-menu-id-2').fadeIn(700);  
+              console.log('baja')
+            }
+            if (index==2 && direction=='up'){
+              $('#top-menu-id-2').hide(0);  
+              console.log('sube')
+            }
+          },
+        });
+      });
+    </script>
+
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/all.js"></script>
+  </head>
+
+  <body class="index">
+    <div id="fullpage" class="main-div">
+	<!-- .header -->
+	<div class="section" data-anchor="Home">
+		<div class="header">
+			<div class="cont-header">
+				<div class="cont-header-link">
+					<a href="https://middlemanapp.com" target="_blank" class="link-header link-1">&#9658; Claim your Golden Ticket</a> 
+					<a href="https://middlemanapp.com" target="_blank" class="link-header link-2">&#9658; Request Exclusive Access</a> 
+				</div>
+				<div class="header-text"><h1 class="header-text-1"><b> Luxury wharehouses </b> in Miami, <br>Florida for deluxe clients and <br>their most cherished assets</h1>
+				</div>
+				<div class="header-text-aux">
+					<h1><b> Luxury wharehouses </b> <br>in Miami, Florida <br> for deluxe clients and <br>their most cherished assets</h1>
+				</div>
+				<!-- <div class="header-text"><p class="header-text-2">Doral, FL 33178, EE.UU.</p></div> -->
+				<img src="/images/desktop-logo.png" class="header-logo" alt="Desktop logo" />
+				<!-- <div class="header-scroll-down">
+					<img src="/images/scrolldown.png" class="header-arrow" alt="Scrolldown" />
+					<p>Scroll Down</p>
+				</div> -->
+				
+			</div>
+			<div class="header-aux">
+					<a href="#ConceptOutline">
+						<p>Scroll Down</p>				
+						<img src="/images/arrow-down.png" class="header-arrow" alt="Arrow down" />
+					</a>
+			</div>
+<!-- 			<div id="top-menu-id-1" class="top-menu">
+				<ul id="menu">
+					<li class="bullet" data-menuanchor="ConceptOutline"><a id="ConceptOutline-id"  href="#ConceptOutline">Concept Outline</a>
+					<li class="bullet" data-menuanchor="Specs"><a href="#Specs">Specs</a>
+					<li class="bullet" data-menuanchor="Reasons"><a href="#Reasons">Reasons</a>
+					<li class="bullet" data-menuanchor="Location"><a href="#Location">Location</a>
+					<li class="bullet" data-menuanchor="Gallery"><a href="#Gallery">Gallery</a>
+					<li class="bullet" data-menuanchor="Progress"><a href="#Progress">Progress</a>
+					<li class="bullet" data-menuanchor="eighthPage"><a href="#Contact">Contact</a>
+				</ul>
+			</div> --> 
+		</div>
+	</div>
+	<!-- //header -->
+		
+	<!-- What is -->
+	<div id="what-id" class="section" data-anchor="ConceptOutline">
+		<div id="top-menu-id-2" class="top-menu">
+			<ul id="menu-2">
+				<li class="bullet" data-menuanchor="Home"><a href="#Home"><img src="/images/Animated-Logo.png" class="menu-logo" alt="Animated logo" /></a></li>
+				<li class="bullet" data-menuanchor="ConceptOutline"><a id="ConceptOutline-id-2" href="#ConceptOutline">Concept Outline</a>
+				<li class="bullet" data-menuanchor="Specs"><a href="#Specs">Specs</a>
+				<li class="bullet" data-menuanchor="Features"><a href="#Features">Features</a>
+				<li class="bullet" data-menuanchor="Location"><a href="#Location">Location</a>
+				<li class="bullet" data-menuanchor="Gallery"><a href="#Gallery">Gallery</a>
+				<li class="bullet" data-menuanchor="Progress"><a href="#Progress">Progress</a>
+				<li class="bullet" data-menuanchor="Contact"><a href="#Contact">Contact</a>
+				<li class="bullet" data-menuanchor="Contact"><a href="https://middlemanapp.com" target="_blank" class="link-menu-2">&#9658; Request Exclusive Access</a>
+			</ul>
+			
+		</div>
+		<!-- <div class="what-cont-img"> -->
+			<img src="/images/wwa-img.png" class="what-img" alt="Wwa img" />
+		<!-- </div> -->
+		<div class="row what-is">
+			<div class="what-grid">
+	          <div class="large-6 medium-6 columns what-grid-i what-grid-1">
+	          </div>
+	          <div class="large-6 medium-6 columns what-grid-i what-grid-2">
+	          	<img src="/images/separador.png" class="what-separador what-separador-1" alt="Separador" />  
+	            <h1>Decoding Collection Suites</h1>
+            	<p>This prestigious and ambitious closed park in the best area of El Doral, was carefully designed for passionate luxury clients looking to keep their properties as safe as possible while still being able to enjoy them. Secure developments with a special attention to privacy throught direct access to the suites instantly available to owners.</p>
+            	<img src="/images/separador.png" class="what-separador what-separador-2" alt="Separador" />  
+				<div class="what-is-info">
+	          		37 luxury warehouses on a <br>guarded and enclosed location<br> with highly secure buildings. 
+	  			</div>	
+	          </div>
+	        </div>
+		</div>	
+		<!-- <img src="/images/CO-background.png" class="what-background" alt="Co background" /> -->
+	</div>	
+	<!-- //What is -->
+
+	<!-- What is ghost divs (For mobile only) -->
+	<div id="ghost1" class="section fp-auto-height" data-anchor="What-is-m">
+		<div class="what-is-ghost">
+			<div class="what-is-info">
+          		37 suites for sale on a 4.5 acres lot enclosed in 4 secure buildings
+  			</div>	
+			<img src="/images/011-b.jpg" class="products-img-1" alt="011 b" />
+		</div>
+	</div>
+	
+	<div id="ghost2" class="section fp-auto-height" data-anchor="Specs-1">
+		<div class="product-main-ghost product-main-ghost-1">
+			<h1>Monte Carlo</h1>
+			<img src="/images/separador.png" class="product-separador product-separador-1" alt="Separador" />
+			<div class="product-text">
+				<ul>
+					<li>2,070 -­ 2,300 sq. ft of storage</li>
+					<li>Up to 250 sq. ft. of mezzanine</li>
+					<li>total: 2,320 -­ 2,527 sq. ft.</li>
+					<li>5-8 cars<br><br></li>
+				</ul>		
+			</div>
+		</div>
+	</div>
+
+	<div id="ghost3" class="section fp-auto-height" data-anchor="Specs-2">
+		<div class="product-main-ghost product-main-ghost-2">
+			<h1>Daytona</h1>
+			<img src="/images/separador.png" class="product-separador product-separador-1" alt="Separador" />
+			<div class="product-text">
+				<ul>
+					<li>1,873 -­ 2,215 sq. ft of storage</li>
+					<li>Up to 250 sq. ft. of mezzanine</li>
+					<li>total: 2,063 -­ 2,495 sq. ft.</li>
+					<li>4-10 cars<br><br></li>
+				</ul>		
+			</div>
+		</div>
+	</div> 
+
+	<div id="ghost4" class="section fp-auto-height" data-anchor="Specs-3">
+		<div class="product-main-ghost product-main-ghost-3">
+			<h1>Silverstone</h1>
+			<img src="/images/separador.png" class="product-separador product-separador-1" alt="Separador" />
+			<div class="product-text">
+				<ul>
+					<li>1,873 -­ 2,215 sq. ft of storage</li>
+					<li>Up to 250 sq. ft. of mezzanine</li>
+					<li>total: 2,063 -­ 2,495 sq. ft.</li>
+					<li>4-10 cars <br><br></li>
+				</ul>		
+			</div>
+		</div>
+	</div> 
+
+	<div id="ghost5" class="section fp-auto-height" data-anchor="Specs-4">
+		<div class="product-main-ghost product-main-ghost-4">
+			<h1>Spa</h1>
+			<img src="/images/separador.png" class="product-separador product-separador-1" alt="Separador" />
+			<div class="product-text">
+				<ul>
+					<li>1,827 -­ 1,842 sq. ft of storage</li>
+					<li>Up to 250 sq. ft. of mezzanine</li>
+					<li>total: 2,077 -­ 2,092 sq. ft.</li>
+					<li>5-8 cars <br><br></li>
+				</ul>		
+			</div>
+		</div>
+	</div>
+	<!-- //Ghost divs -->
+	
+	<!-- Products <--></-->
+	<div id="desktop1" class="section fp-auto-height"  data-anchor="Features">
+		<div class="product-main">
+			<div class="expanded row product-img-grid" >
+			  	<div class="large-12 columns products-col-i products-col-1" >
+					<img src="/images/features-picture.png" class="products-img-1" alt="Features picture" />
+			  	</div>
+			</div>	
+
+			<div class="row text-center align-center product-info-grid" data-equalizer>
+				<div class="large-3 medium-3 small-3 columns potato" >
+					<div class="primary callout product-info-1" data-equalizer-watch>
+						<h1>Monte Carlo</h1>
+						<img src="/images/separador.png" class="product-separador product-separador-1" alt="Separador" />  
+						<div class="product-text">
+							<ul>
+								<li>2,070 -­ 2,300 sq. ft of storage</li>
+								<li>Up to 250 sq. ft. of mezzanine</li>
+								<li>total: 2,320 -­ 2,527 sq. ft.</li>
+								<li>5-8 cars<br><br><br><br></li>
+							</ul>		
+						</div>
+					</div>
+				</div>
+				<div class="large-3 medium-3 small-3 columns potato" >
+					<div class="primary callout product-info-2" data-equalizer-watch>
+						<h1>Daytona</h1>
+						<img src="/images/separador.png" class="product-separador product-separador-2" alt="Separador" />  
+						<div class="product-text">
+							<ul>
+								<li>1,873 -­ 2,215 sq. ft of storage</li>
+								<li>Up to 250 sq. ft. of mezzanine</li>
+								<li>total: 2,063 -­ 2,495 sq. ft.</li>
+								<li>4-10 cars<br><br><br><br></li>
+							</ul>		
+						</div>
+					</div>
+				</div>
+				<div class="large-3 medium-3 small-3 columns potato" >
+					<div class="primary callout product-info-3" data-equalizer-watch>
+						<h1>Silverstone</h1>
+						<img src="/images/separador.png" class="product-separador product-separador-3" alt="Separador" />  
+						<div class="product-text">
+							<ul>
+								<li>1,873 -­ 2,215 sq. ft of storage</li>
+								<li>Up to 250 sq. ft. of mezzanine</li>
+								<li>total: 2,063 -­ 2,495 sq. ft.</li>
+								<li>4-10 cars <br><br><br><br></li>
+							</ul>			
+						</div>
+					</div>
+				</div>
+				<div class="large-3 medium-3 small-3 columns potato" >
+					<div class="primary callout product-info-4" data-equalizer-watch>
+						<h1>Spa</h1>
+						<img src="/images/separador.png" class="product-separador product-separador-3" alt="Separador" />  
+						<div class="product-text">
+							<ul>
+								<li>1,827 -­ 1,842 sq. ft of storage</li>
+								<li>Up to 250 sq. ft. of mezzanine</li>
+								<li>total: 2,077 -­ 2,092 sq. ft.</li>
+								<li>5-8 cars <br><br><br><br></li>
+							</ul>			
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- //Products -->
+
+	<!-- ebook -->
+	<div class="section fp-auto-height" data-anchor="Ebook">
+		<div class="ebook-main">
+			<a class="ebook-link" href="http://middlemanapp.com" target= "_blank">
+			<img src="/images/Ebook-Cta-unhovered.png" onmouseover="this.src='/images/Ebook-Cta.png'" onmouseout="this.src='/images/Ebook-Cta-unhovered.png'" border="0" alt=""/>
+				<!-- <img src="/images/Ebook-Cta-unhovered.png" class="ebook-img" alt="Ebook cta unhovered" /> 
+				<img src="/images/Ebook-Cta-unhovered.png" class="ebook-img" alt="Ebook cta unhovered" />-->
+			</a>
+			<a class="ebook-link-aux" href="http://middlemanapp.com" target= "_blank">
+			<img src="/images/Ebook-Cta-m.png" class="ebook-img-aux" alt="Ebook cta m" />
+				<!-- <img src="/images/Ebook-Cta-unhovered.png" class="ebook-img" alt="Ebook cta unhovered" /> 
+				<img src="/images/Ebook-Cta-unhovered.png" class="ebook-img" alt="Ebook cta unhovered" />-->
+			</a>
+			<img src="/images/CO-background.png" class="ebook-background" alt="Co background" />
+			<img src="/images/CO-background.png" class="ebook-background" alt="Co background" />
+
+		</div>
+	</div>
+	<!-- //ebook -->
+
+	<!-- wine -->
+	<div class="section fp-auto-height" data-anchor="Location">
+		<div class="row wine">
+	          <div class="large-6 medium-6 columns wine-i wine-1">
+	              <img src="/images/doublefeatures.png" class="wine-img wine-img-1" alt="Doublefeatures" /> 
+	          </div>
+	          <div class="large-6 medium-6 columns wine-i wine-2">
+	          		<div class="wine-title">
+	          			<img src="/images/separador.png" class="wine-separator" alt="Separador" />
+ 	          			<h1>Fine features from Collection Suites</h1>	
+	          		</div>
+	              	<div class="inner-slide">
+		              	<div class="slide"> <p>Every time you come across one of our suites you’ll be witness to the most professional finishes. The unit is equipped with a wine cooler of 8-12 bottles with an ice maker and a small fridge to boot allowing you to comfortably entertain all your guests...</p> </div>
+					    <div class="slide"> <p>...Speaking of guests, you’ll have between 2-3 guest parking spots depending on the unit you purchase. You’ll be stepping on perfectly polished concrete floors that can be customized to your color 	preferences.</p> </div>
+					    <div class="slide"> <p>Hanging lights will be strategically placed so that your high end car gets the luxurious lighting it deserves.Bathrooms equipped with showers and marble -or granite- tables and individual water measuring systems.</p> </div>
+					    <div class="slide"> <p>Every suite has a security system and software with three possible upgrades in terms of number of security cameras, smart lighting controls, garage doors, music, tv, A/C, and CO2 levels, all  through a mobile application.</p> </div>
+					    <div class="slide"> <p>Internet access and phone services will be taken care of by COMCAST. Differently abled people can enjoy our premium facilities just as much thanks to our accessible spaces.</p></div>
+	              </div>
+	          </div>
+	        </div>
+	</div>
+	<!-- wine -->
+
+	<!-- Map -->
+	<div class="section fp-auto-height" data-anchor="Map">
+		<div class="cont-map">
+			<div class="map-div">
+<!-- 				<iframe class="map-frame" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:Eic2MDUwIE5XIDEwMm5kIEF2ZSwgRG9yYWwsIEZMIDMzMTc4LCBVU0E&maptype=roadmap&key=AIzaSyDIRU85Fnjeh6Br6woy80RqNrGwc3k2		iGs" allowfullscreen></iframe>  	 -->
+				<img src="/images/CS-Map.jpg" class="map-img" alt="Cs map" /> 
+				<img src="/images/CS-Map-mini.jpg" class="map-img-mini" alt="Cs map mini" /> 
+				<div class="map-cont-link-ghost map-cont-link">
+					<a href="https://www.google.com/maps/place/6050+NW+102nd+Ave,+Doral,+FL+33178/@25.827844,-80.361955,1026m/data=!3m1!1e3!4m5!3m4!1s0x88d9bbf766c84a01:0x12db60e85e36a4f9!8m2!3d25.827844!4d-80.3619546?hl=en-US" target="_blank" class="map-link">View Map</a>
+				</div>
+			</div>
+			<div id="cover">
+				<div class="cover-logo-wrapper">
+					<div id="cover-logo">
+						<div id="cover-logo-box-1" class="cover-logo-boxes">
+							<span>
+							<h1>6050 NW 102nd Ave.</h1>
+							<h2>Doral, Fl 33178</h2>
+							<p><b>19 minutes away from Miami International airport <br> 10 minutes away from Palmetto Expressway <br> 38 minutes away from Homestead Miami Speedway</b></p>
+							<p>Right around the corner you’ll find two fortune 500 companies: World Fuel Services Corporation and Lennar Corporation. Plus one of the world’s largest logistics companies. Less than five minutes away it’s the new Doral Downtown and City Hall. Secure wise four police departments are less than a minute away.</p>
+							<div class="map-cont-link">
+								<a href="https://www.google.com/maps/place/6050+NW+102nd+Ave,+Doral,+FL+33178/@25.827844,-80.361955,1026m/data=!3m1!1e3!4m5!3m4!1s0x88d9bbf766c84a01:0x12db60e85e36a4f9!8m2!3d25.827844!4d-80.3619546?hl=en-US" target="_blank" class="map-link">View Map</a>
+							</div>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Map -->	
+	<!-- Ghost divs encore (Mobile only!) -->
+	<div id="ghost5" class="section fp-auto-height" data-anchor="Map-m">
+		<div class="map-ghost">
+			<h1>6050 NW 102nd Ave.</h1>
+			<h2>Doral, Fl 33178</h2>
+			<p style="text-align:center" ><b>19 minutes away from Miami International airport <br> 10 minutes away from Palmetto Expressway <br> 38 minutes away from Homestead Miami Speedway</b></p>
+			<p>Right around the corner you’ll find two fortune 500 companies: World Fuel Services Corporation and Lennar Corporation. Plus one of the world’s largest logistics companies. Less than five minutes away it’s the new Doral Downtown and City Hall. Secure wise four police departments are less than a minute away.</p>
+		</div>
+	</div>
+	<!-- //Ghost divs encore (Mobile only!) -->
+
+	<!-- SlideShow -->
+	<div class="section fp-auto-height cont-slideshow" data-anchor="Progress">
+		<!-- <div class=""> -->
+		<div class="slideshow-container">
+		    <div class="hub-slider">
+		        <div class="hub-slider-slides">
+		            <ul>
+						<li><img src="/images/001-b.jpg" alt="001 b" /></li>
+						<li><img src="/images/002-b.jpg" alt="002 b" /></li>
+						<li><img src="/images/003-b.jpg" alt="003 b" /></li>
+						<li><img src="/images/003-b.jpg" alt="003 b" /></li>
+						<li><img src="/images/004-b.jpg" alt="004 b" /></li>
+						<li><img src="/images/005-b.jpg" alt="005 b" /></li>
+						<li><img src="/images/006-b.jpg" alt="006 b" /></li>
+						<li><img src="/images/007-b.jpg" alt="007 b" /></li>
+						<li><img src="/images/008-b.jpg" alt="008 b" /></li>
+						<li><img src="/images/009-b.jpg" alt="009 b" /></li>
+						<li><img src="/images/011-b.jpg" alt="011 b" /></li>				
+		            </ul>
+		        </div>
+		        <div class="hub-slider-controls">
+		            <button class="hub-slider-arrow hub-slider-arrow_next"></button>
+		            <button class="hub-slider-arrow hub-slider-arrow_prev"></button>
+		        </div>
+	    	</div>
+	    	<div class="slideshow-ghost">
+	    		<h1>We're almost there!</h1>
+	          	<img src="/images/separador.png" class="slideshow-separator-ghost" alt="Separador" />  
+	    	</div>
+		</div>
+	</div>
+	<!-- //SlideShow -->	
+
+	<!-- Milestone -->
+	<div id="desktop2" class="section fp-auto-height" data-anchor="Progress">
+		<div class="milestone-cont">
+			<img src="/images/deco-bullets.png" class="milestone-diamond-small-1" alt="Deco bullets" />
+			<img src="/images/deco-bullets.png" class="milestone-diamond-small-2" alt="Deco bullets" />
+			<div class="row milestone">
+				<div class="milestone-grid">
+		          	<div class="small-7 columns milestone-grid-i milestone-grid-1">
+						<h1>Take in how the suites are being assembled</h1>
+						<div id="box-wrapper">
+							<div class="bigbox">
+								<div class="box-on"><img src="/images/Progress_Bar_001.png" class="milestone-box-img" alt="Progress bar 001" /></div>
+							</div>
+<!-- 							<div class="bigbox">
+								<div class="box-on"><img src="/images/Milestone-01.png" class="milestone-box-img" alt="Milestone 01" /></div>
+							</div>
+							<div class="bigbox">
+								<div class="box-on"><img src="/images/Milestone-02.png" class="milestone-box-img" alt="Milestone 02" /></div>
+							</div>
+							<div class="bigbox">
+								<div class="box-on"><img src="/images/Milestone-03.png" class="milestone-box-img" alt="Milestone 03" /></div>
+							</div>
+							<div class="bigbox">
+								<div class="box-on"><img src="/images/Milestone-04.png" class="milestone-box-img" alt="Milestone 04" /></div>
+							</div> -->
+						</div>
+			          	<a href="https://middlemanapp.com" target="_blank" class="milestone-link">&#9658; Claim your Golden Ticket</a> 
+		          	</div>
+		          	<div class="small-5 columns milestone-grid-i milestone-grid-2">
+						<img src="/images/Progressbar_images_Edificio1.png" class="milestones-img" alt="Progressbar images edificio1" />  
+					</div>
+		        </div>
+			</div>	
+		</div>
+	</div>
+	<!-- //Milestone -->
+
+	<!-- Ghost Milestone (Mobile only!)-->
+	<div id="ghost6" class="section fp-auto-height" data-anchor="Milestone-m">
+		<div class="milestone-ghost">
+			<p>Take in how the suites are being assembled </p>
+          	<div class="milestone-ghost-cont-img">
+				<img src="/images/Progressbar_images_Edificio1.png" class="milestones-img-ghost" alt="Progressbar images edificio1" /> 
+			</div>
+			<div class="box-ghost"> Milestone 01 </div>
+		</div>
+	</div>
+	<!-- //Ghost Milestone -->
+
+	<!-- Ghost Contact 1 (For mobile Only)-->
+	<div id="ghost7" class="section fp-auto-height" data-anchor="Contact-1">
+		<div class="contact-ghost-1 contact">
+			<img src="/images/footer-logo.png" class="contact-diamond-ghost" alt="Footer logo" />
+			<div class="contact-ghost-1-text ghost">
+				<h1> <span class="span-diamond">&#9670</span> <span class="span-text">Get in touch </span><span class="span-diamond">&#9670</span></h1>
+             	<p><b>Telephone</b>: (+1) 4 448 82 29 / <br> <b>Mobile</b>: (+1) 300 467 86 02</p>
+             	<p><b>Address:</b> 3075 Northwest 107th <br>Avenue, Doral, FL 33172-2134.</p>
+          		<p>If you are interested in our services, <br>please contact us: <br> <a href="mailto:contact@collection-suites.net" class="contact-mail-link">contacto@collection-suites.net</a> </p>
+          	</div>
+		</div>
+	</div>
+	<!-- //Ghost Contact -->
+
+	<!-- Ghost Contact 2 (For mobile Only)-->
+	<div id="ghost8" class="section fp-auto-height" data-anchor="Contact-2">
+		<div class="contact-ghost-2 contact">
+			<p><b>Or leave your contact info and we will get in touch with you in the next 1-2 bussiness days.</b></p>
+			<form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
+				<div class="contact-fields contact-fields-1">
+					<p>NAME</p>
+					<input class="name" type="name" name="name" placeholder=" Please enter your name" required="">
+				</div>	
+				<div class="contact-fields contact-fields-2">
+					<p>TELEPHONE</p>
+					<input class="phone" type="phone" name="phone" placeholder=" Please enter your phone number" required="">
+				</div>
+				<div class="contact-fields contact-fields-3">
+					<p>EMAIL</p>
+					<input class="email" type="email" name="email" placeholder=" Please enter your email" required="">
+				</div>
+				<div>
+					<input type="submit" class="submit" value="Send">
+				</div>
+			</form>
+		</div>
+		<div class="copyright-ghost">
+			<span>&copy; 2016 Collection Suites. Powered by </span>
+			<a href="http://www.thesocialus.com" title="The Social Us" target="_blank"><img src="images/TheSocialUs.png" alt="TheSocialUs"></a>
+		</div>
+	</div>
+	<!-- //Ghost Contact -->
+
+	<!-- Contact Us -->
+	<div id="desktop3" class="section fp-auto-height" data-anchor="Contact">
+		<div class="contact-main">
+			<img src="/images/footer-logo.png" class="contact-diamond" alt="Footer logo" />
+			<div class="expanded row contact">
+				<div class="contact-grid">
+		          	<div class="small-6 columns contact-grid-i contact-grid-1">
+						<h1> <span class="span-diamond">&#9670</span> <span class="span-text">Get in touch </span><span class="span-diamond">&#9670</span></h1>
+		             	<p><b>Telephone</b>: (+1) 4 448 82 29 / <b>Mobile</b>: (+1) 300 467 86 02</p>
+		             	<p><b>Address:</b> 3075 Northwest 107th Avenue, Doral, FL 33172-2134.</p>
+		          		<p>If you are interested in our services, please contact us: <br> <a href="mailto:contacto@collection-suites.net" class="contact-mail-link">contact@collection-suites.net</a> </p>
+		          	</div>
+		          	<div class="small-6 columns contact-grid-i contact-grid-2">
+						<p><b>Or leave your contact info and we will get in touch with you in the next 1-2 bussiness days.</b></p>
+						<form action="MAILTO:someone@example.com" method="post" enctype="text/plain">
+							<div class="contact-fields contact-fields-1">
+								<p>Name</p>
+								<input class="name" type="name" name="name" placeholder=" Please enter your name" required="">
+							</div>	
+							<div class="contact-fields contact-fields-2">
+								<p>Telephone</p>
+								<input class="phone" type="phone" name="phone" placeholder=" Please enter your land or mobile phone" required="">
+							</div>
+							<div class="contact-fields contact-fields-3">
+								<p>Email</p>
+								<input class="email" type="email" name="email" placeholder=" Please enter your email" required="">
+							</div>
+							<div>
+								<input type="submit" class="submit" value="Send">
+							</div>
+						</form>
+					</div>
+		        </div>
+	        </div>
+		</div>	
+		<div class="copyright">
+			<span>&copy; 2016 Collection Suites. Powered by </span>
+			<a href="http://www.thesocialus.com" title="The Social Us" target="_blank"><img src="images/TheSocialUs.png" alt="TheSocialUs"></a>
+		</div>
+	</div>
+	<!-- //Contact Us -->
+
+</div>
+
+
+
+
+
+
+  </body>
+ 
+  
+
+</html>
